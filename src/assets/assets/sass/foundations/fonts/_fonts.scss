@@ -1,0 +1,75 @@
+/* Text Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* Heading */
+@mixin font-heading_1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 64px;
+
+  @media (max-width: 725px) {
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
+@mixin font-heading_2 {
+  font-size: 32px;
+  font-weight: 900;
+
+  @media (max-width: 725px) {
+    font-size: 25px;
+  }
+}
+@mixin font-heading_3 {
+  font-size: 32px;
+  font-weight: 600;
+  @media (max-width: 725px) {
+    font-size: 25px;
+  }
+}
+@mixin font-heading_4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Interface */
+@mixin font-interface_xl {
+  font-size: 16px;
+  font-weight: 600;
+}
+@mixin font-interface_l {
+  font-size: 16px;
+  font-weight: 500;
+}
+@mixin font-interface_md {
+  font-size: 12px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Paragraph */
+@mixin font-paragraph_xl-italic{
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 24px;
+}
+@mixin font-paragraph_l-italic{
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 24px;
+}
+@mixin font-paragraph_md{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+@mixin font-paragraph_sm{
+  font-size: 12px;
+  font-weight: 400;
+}

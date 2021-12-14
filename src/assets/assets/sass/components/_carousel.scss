@@ -1,0 +1,122 @@
+.carousel {
+  max-width: 1366px;
+  margin: 0 auto;
+  margin-top: $spacing-24;
+  margin-bottom: $spacing-12;
+  padding: 0 $spacing-12;
+
+  .slide img {
+    border-radius: $radius-light;
+  }
+  
+  .heading_2 {
+    @include font-heading_2;
+    color: $element_primary;
+  }
+
+  .heading_3 {
+    margin-top: $spacing-6;
+    @include font-heading_3;
+    color: $element_primary;
+  }
+
+  .paragraph {
+    margin: $spacing-4 0;
+    @include font-paragraph_md;
+    color: $element_secondary;
+    max-width: 536px;
+    height: 75px;
+    overflow: hidden;
+  }
+
+  .link {
+    display: flex;
+    gap: $spacing-2;
+    width: fit-content;
+    @include font-interface_xl;
+    color: $element_action;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-12;
+}
+
+.carousel-actions_header {
+  grid-area: action; 
+  transform: translateX(-2rem);
+}
+
+.carousel-actions:nth-child(3) {
+  display: none;
+}
+
+.carousel-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border: $border-light;
+  border-radius: $radius-full;
+  position: inherit;
+  transition: 200ms ease-in 0s;
+
+  &:not(:nth-child(1)) {
+    transform: rotate(180deg);
+    margin-left: $spacing-4;
+  }
+
+  &:hover {
+    background: rgba(27,3,35,0.15);
+  }
+  }
+}
+
+
+@media (max-width: 725px) {
+  .carousel {
+    padding: 0 $spacing-4;
+  }
+
+  .carousel-actions:nth-child(3) {
+    display: flex;
+  }
+
+  .carousel-actions_content {
+    justify-content: flex-start;
+    transform: translateY($spacing-4);
+  }
+
+  .carousel-actions_header {
+    display: none;
+  }
+}
+
+@media (max-width: 590px) {
+  .carousel {
+    padding: inherit;
+
+    .slide img {
+      border-radius: inherit;
+    }
+
+    .heading_2, .heading_3, .paragraph, .link, .carousel-actions_content {
+      padding: 0 $spacing-4;
+    }
+}
+}
