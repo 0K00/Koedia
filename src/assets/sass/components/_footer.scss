@@ -1,0 +1,63 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr 1fr;
+  gap: $spacing-2;
+  grid-template-areas: 
+    "text"
+    "btn"; 
+  margin-bottom: $spacing-12;
+}
+
+.text { 
+  grid-area: text; 
+  text-align: center;
+  align-self: end;
+  text-transform: uppercase;
+  @include font-paragraph_md;
+  color: $element_primary;
+}
+
+.footer__bloc { 
+  grid-area: btn;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  gap: $spacing-4;
+  padding: $spacing-4;
+  background-color: $background_underground1;
+}
+
+.btn {
+  min-height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  background-color: $element_action-darker;
+  &:hover, &:focus, &:active {
+    background-color: $element_action;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    grid-template-rows: 1fr; 
+    grid-template-areas: 
+    "btn text";
+    margin-top: $spacing-12;
+  }
+
+  .text {
+    align-self: center;
+  }
+
+  .btn {
+    height: 100px;
+  }
+}

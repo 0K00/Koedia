@@ -42,13 +42,12 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
 @mixin font-interface_l {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 700;
 }
 @mixin font-interface_md {
-  font-size: 12px;
-  font-weight: 700;
-  font-style: italic;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 /* Paragraph */
@@ -66,7 +65,7 @@ font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 @mixin font-paragraph_md{
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
 }
 @mixin font-paragraph_sm{
